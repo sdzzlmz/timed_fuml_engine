@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmlns:uml="http://www.omg.org/spec/UML/20131001"
+         xmlns:MD_Customization_for_SysML__additional_stereotypes="http://www.magicdraw.com/spec/Customization/180/SysML"
+         xmlns:StandardProfile="http://www.omg.org/spec/UML/20131001/StandardProfile"
+         xmlns:sysml="http://www.omg.org/spec/SysML/20150709/SysML"
+         xmlns:xmi="http://www.omg.org/spec/XMI/20131001"
+         xmlns:MD_Customization_for_Requirements__additional_stereotypes="http://www.magicdraw.com/spec/Customization/180/Requirements"
+         xmlns:Dependency_Matrix_Profile="http://www.magicdraw.com/schemas/Dependency_Matrix_Profile.xmi">
+    <uml:Model xmi:type="uml:Model" xmi:id="eee_1045467100313_135436_1" name="Model">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_19_0_2_132b03ce_1562554851938_866738_13844"
+                      body="Author:zhangpuke.&#xA;Created:2012/10/1, 3:10 PM.&#xA;Title:.&#xA;Comment:.&#xA;">
+            <annotatedElement xmi:idref="eee_1045467100313_135436_1"/>
+        </ownedComment>
+        <packagedElement xmi:type="uml:Activity" xmi:id="_19_0_2_132b03ce_1562554900131_821342_42562"
+                         name="TestCallBehavior">
+            <edge xmi:type="uml:ControlFlow" xmi:id="_19_0_2_132b03ce_1562556026554_502303_43202"
+                  visibility="public"
+                  source="_19_0_2_132b03ce_1562556016187_746844_43157"
+                  target="_19_0_2_132b03ce_1562556021174_137435_43169">
+                <weight xmi:type="uml:LiteralUnlimitedNatural"
+                        xmi:id="_19_0_2_132b03ce_1562556026555_614259_43203"
+                        value="1"/>
+            </edge>
+            <edge xmi:type="uml:ControlFlow" xmi:id="_19_0_2_132b03ce_1562556029909_95076_43215"
+                  visibility="public"
+                  source="_19_0_2_132b03ce_1562556021174_137435_43169"
+                  target="_19_0_2_132b03ce_1562556023676_188005_43188">
+                <weight xmi:type="uml:LiteralUnlimitedNatural"
+                        xmi:id="_19_0_2_132b03ce_1562556029912_884234_43216"
+                        value="1"/>
+            </edge>
+            <node xmi:type="uml:InitialNode" xmi:id="_19_0_2_132b03ce_1562556016187_746844_43157"
+                  name="start"
+                  visibility="public"/>
+            <node xmi:type="uml:CallBehaviorAction"
+                  xmi:id="_19_0_2_132b03ce_1562556021174_137435_43169"
+                  name="Call(step)"
+                  visibility="public"
+                  behavior="_19_0_2_132b03ce_1562556192954_632725_43249"/>
+            <node xmi:type="uml:ActivityFinalNode"
+                  xmi:id="_19_0_2_132b03ce_1562556023676_188005_43188"
+                  name="final"
+                  visibility="public"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Activity" xmi:id="_19_0_2_132b03ce_1562556192954_632725_43249"
+                         name="step"/>
+        <profileApplication xmi:type="uml:ProfileApplication"
+                            xmi:id="_19_0_2_132b03ce_1562554851945_660811_14031">
+            <appliedProfile href="http://www.omg.org/spec/SysML/20150709/SysML.xmi#_SysML__0"/>
+        </profileApplication>
+    </uml:Model>
+</xmi:XMI>

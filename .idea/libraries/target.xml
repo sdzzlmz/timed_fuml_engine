@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="target">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/target/fuml-1.4.0-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/target/fuml-1.4.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/target/fuml-1.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/target/fuml-1.4.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/target/fuml-1.4.0-test-sources.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.eclipse.uml2.uml_5.2.4.v20170530-1052">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/org.eclipse.uml2.uml_5.2.4.v20170530-1052.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/org.eclipse.uml2.uml.source_5.2.4.v20170530-1052.jar!/" />
+    </SOURCES>
+  </library>
+</component>

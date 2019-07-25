@@ -1,0 +1,72 @@
+<component name="libraryTable">
+  <library name="dist">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.4.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.4-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.4.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.4.0-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0b-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.3-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0a-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.4.0-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.4-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.3-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0a.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.2-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0a-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0b.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0b-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0b-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.2-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0a-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.2-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0b-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.0-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.4.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.3-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-RI-1.1.0-src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.3-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.3-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.2-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.0-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.1-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0a-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.1-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.1-distribution.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-RI-1.1.0.zip!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.0-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.1-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.3-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.2.1-test-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.4-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.1.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/org.modeldriven.fuml/dist/fuml-1.3.0.jar!/" />
+      <root url="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mc:RepositoryConfig  
+  xmlns:mc="http://www.modeldriven.org/fuml/repository/config"
+  defaultUMLNamespaceURI="http://www.omg.org/spec/UML/20110701/UML.xmi">   
+ 
+    <artifact name="PrimitiveTypes.xmi" 
+        urn="http://www.omg.org/spec/UML/20161101/PrimitiveTypes.xmi"
+        namespaceURI="http://www.omg.org/spec/PrimitiveTypes/20161101"
+        factoryClassName="org.modeldriven.fuml.repository.model.PrimitiveTypesAssembler">   
+    </artifact>
+    <artifact name="UML.xmi" 
+        urn="http://www.omg.org/spec/UML/20161101/UML.xmi"
+        namespaceURI="http://www.omg.org/spec/UML/20161101"
+        factoryClassName="org.modeldriven.fuml.repository.model.UMLAssembler">
+        <registeredPackage name="UML"/>
+    </artifact> 
+
+<!--     <artifact name="fUML_Syntax.xmi" 
+        urn="fUML_Syntax.xmi"
+        namespaceURI="http://www.omg.org/spec/UML/20110701"
+        factoryClassName="org.modeldriven.fuml.repository.model.fUML_SyntaxAssembler">
+        <registeredPackage name="fUML.Syntax"/>
+    </artifact> 
+ -->
+    <ignoredClass name="PackageImport"/>
+  
+</mc:RepositoryConfig>   
