@@ -22,6 +22,7 @@ public class Parameter extends fuml.syntax.commonstructure.TypedElement {
 			fuml.syntax.classification.ParameterDirectionKind direction) {
 		this.direction = direction;
 	} // setDirection
+	public ParameterDirectionKind getDirection() { return this.direction; }
 
 	public void setIsOrdered(boolean isOrdered) {
 		this.multiplicityElement.setIsOrdered(isOrdered);

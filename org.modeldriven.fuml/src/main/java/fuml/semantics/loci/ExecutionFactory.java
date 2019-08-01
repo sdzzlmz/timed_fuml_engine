@@ -120,6 +120,7 @@ import fuml.syntax.values.LiteralNull;
 import fuml.syntax.values.LiteralReal;
 import fuml.syntax.values.LiteralString;
 import fuml.syntax.values.LiteralUnlimitedNatural;
+import timedfuml.semantics.Timed_SendSignalActionActivation;
 
 
 public class ExecutionFactory extends org.modeldriven.fuml.FumlObject {
@@ -128,7 +129,6 @@ public class ExecutionFactory extends org.modeldriven.fuml.FumlObject {
 	public fuml.semantics.commonbehavior.OpaqueBehaviorExecutionList primitiveBehaviorPrototypes = new fuml.semantics.commonbehavior.OpaqueBehaviorExecutionList();
 	public fuml.syntax.simpleclassifiers.PrimitiveTypeList builtInTypes = new fuml.syntax.simpleclassifiers.PrimitiveTypeList();
 	public fuml.semantics.loci.SemanticStrategyList strategies = new fuml.semantics.loci.SemanticStrategyList();
-
 	public fuml.semantics.commonbehavior.Execution createExecution(
 			fuml.syntax.commonbehavior.Behavior behavior,
 			fuml.semantics.structuredclassifiers.Object_ context) {
@@ -160,20 +160,20 @@ public class ExecutionFactory extends org.modeldriven.fuml.FumlObject {
 		return execution;
 	} // createExecution
 
-	public fuml.semantics.values.Evaluation createEvaluation(
-			org.eclipse.uml2.uml.ValueSpecification specification) {
-		// Create an evaluation object for a given value specification.
-		// The evaluation will take place at the locus of the factory.
-
-		Evaluation evaluation = (Evaluation) this
-				.instantiateVisitor(specification);
-
-		evaluation.specification = specification;
-		evaluation.locus = this.locus;
-
-		return evaluation;
-
-	} // createEvaluation
+//	public fuml.semantics.values.Evaluation createEvaluation(
+//			ValueSpecification specification) {
+//		// Create an evaluation object for a given value specification.
+//		// The evaluation will take place at the locus of the factory.
+//
+//		Evaluation evaluation = (Evaluation) this
+//				.instantiateVisitor(specification);
+//
+//		evaluation.specification = specification;
+//		evaluation.locus = this.locus;
+//
+//		return evaluation;
+//
+//	} // createEvaluation
 	public fuml.semantics.values.Evaluation createEvaluation(
 			fuml.syntax.values.ValueSpecification specification) {
 		// Create an evaluation object for a given value specification.

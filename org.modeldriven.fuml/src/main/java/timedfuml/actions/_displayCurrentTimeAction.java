@@ -15,8 +15,9 @@
 
 package timedfuml.actions;
 
-import org.eclipse.papyrus.moka.discreteevent.DEScheduler;
-import org.eclipse.papyrus.moka.discreteevent.actions.Action;
+import discreteevent.DEScheduler;
+import discreteevent.actions.Action;
+
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -31,10 +32,7 @@ public class _displayCurrentTimeAction extends Action {
 
 	protected OutputStream out = null;
 
-	/**
-	 * @see org.eclipse.papyrus.moka.discreteevent.actions.Action#execute()
-	 *
-	 */
+
 	@Override
 	public void execute() {
 		if (out == null) {

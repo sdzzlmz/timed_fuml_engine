@@ -15,11 +15,12 @@
 
 package timedfuml.control.queue;
 
-import org.eclipse.papyrus.moka.discreteevent.DEScheduler;
-import org.eclipse.papyrus.moka.fuml.control.execution.RootExecution;
-import org.eclipse.papyrus.moka.fuml.control.queue.ExecutionLoop;
 
-public class TimedExecutionLoop extends ExecutionLoop{
+import discreteevent.DEScheduler;
+import org.modeldriven.fuml.control.execution.RootExecution;
+import org.modeldriven.fuml.control.queue.ExecutionLoop;
+
+public class TimedExecutionLoop extends ExecutionLoop {
 	
 	// Discrete event time scheduler
 	protected DEScheduler scheduler;
@@ -28,7 +29,7 @@ public class TimedExecutionLoop extends ExecutionLoop{
 		super();
 	}
 	
-	@Override
+
 	public void start(RootExecution execution) {
 		// Retrieve scheduler instance and starts the execution
 		this.scheduler = DEScheduler.getInstance();

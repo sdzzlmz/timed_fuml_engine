@@ -14,6 +14,7 @@
 package timedfuml.semantics;
 
 import discreteevent.DEScheduler;
+import discreteevent.Event;
 import discreteevent.actions.Action;
 import fuml.semantics.actions.ActionActivation;
 import fuml.syntax.values.LiteralReal;
@@ -37,9 +38,9 @@ public class Timed_OpaqueActionActivation extends ActionActivation {
 	public void sendOffers() {
 		// FIXME control delegation
 
-		if (((Action) node).getLocalPreconditions() != null) {
+		if (((org.eclipse.uml2.uml.Action) node).getLocalPreconditions() != null) {
 			double duration = 0.0;
-			DurationConstraint durationConstraint = (DurationConstraint) ((Action) node).getLocalPostconditions().get(0);
+			DurationConstraint durationConstraint = (DurationConstraint) ((org.eclipse.uml2.uml.Action) node).getLocalPostconditions().get(0);
 			DurationInterval durationInterval = (DurationInterval) durationConstraint.getSpecification();
 			LiteralReal durationValue = (LiteralReal) ((Duration) durationInterval.getMax()).getExpr();
 			_sendOfferAction sendOfferAction = new _sendOfferAction(this);
@@ -48,7 +49,7 @@ public class Timed_OpaqueActionActivation extends ActionActivation {
 				duration = ((LiteralReal) durationValue).getValue();
 			}
 			this.suspend();
-			DEScheduler.getInstance().pushEvent(new Event(duration, sendOfferAction));
+			DEScheduler.getInstance().pushEvent(new Event(duration, (Action)sendOfferAction));
 		} else {
 			super.sendOffers();
 		}
@@ -69,10 +70,10 @@ public class Timed_OpaqueActionActivation extends ActionActivation {
 		super.sendOffers();
 	}
 
-	/**
-	 * @see org.eclipse.papyrus.moka.fuml.Semantics.Actions.BasicActions.ActionActivation#doAction()
-	 *
-	 */
+//	/**
+//	 * @see org.eclipse.papyrus.moka.fuml.Semantics.Actions.BasicActions.ActionActivation#doAction()
+//	 *
+//	 */
 	@Override
 	public void doAction() {
 		// Do nothing

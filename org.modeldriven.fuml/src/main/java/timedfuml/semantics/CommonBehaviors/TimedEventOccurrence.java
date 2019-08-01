@@ -59,7 +59,7 @@ public class TimedEventOccurrence extends EventOccurrence {
 			TimeEvent timeEvent = (TimeEvent) trigger.getEvent();
 			if (timeEvent.getWhen() != null && timeEvent.getWhen().getExpr() != null) {
 				Evaluation evaluation = this.target.getReferent().getLocus().getFactory()
-						.createEvaluation(timeEvent.getWhen().getExpr());
+						.createEvaluation((fuml.syntax.values.ValueSpecification)timeEvent.getWhen().getExpr());
 				// TODO the matching process
 //				if (evaluation != null) {
 //					if (evaluation instanceof ISM_OpaqueExpressionEvaluation) {

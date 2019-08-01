@@ -14,6 +14,7 @@ package fuml.semantics.commonbehavior;
 
 import fuml.semantics.values.Value;
 import fuml.semantics.values.ValueList;
+import fuml.syntax.classification.Parameter;
 
 public class ParameterValue extends org.modeldriven.fuml.FumlObject {
 
@@ -36,5 +37,10 @@ public class ParameterValue extends org.modeldriven.fuml.FumlObject {
 
 		return newValue;
 	} // copy
+	public void setParameter(Parameter parameter) {
+		this.parameter = parameter;
+	}
+
 	public void setValues(ValueList valueList) {this.values = valueList;}
+	public ValueList getValues() { return  this.values; }
 } // ParameterValue

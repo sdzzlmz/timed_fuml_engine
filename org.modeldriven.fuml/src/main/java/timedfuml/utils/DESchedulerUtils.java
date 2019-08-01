@@ -16,6 +16,7 @@ package timedfuml.utils;
 
 import discreteevent.DEScheduler;
 import discreteevent.Event;
+import fuml.semantics.OpaqueExpressionEvaluation;
 import fuml.semantics.loci.SemanticVisitor;
 import fuml.semantics.simpleclassifiers.RealValue;
 import fuml.semantics.structuredclassifiers.Object_;
@@ -62,7 +63,7 @@ public class DESchedulerUtils {
 			TimeEvent timeEvent = (TimeEvent) trigger.getEvent();
 			if (timeEvent.getWhen() != null && timeEvent.getWhen().getExpr() != null) {
 				Evaluation evaluation = context.getLocus().getFactory()
-						.createEvaluation(timeEvent.getWhen().getExpr());
+						.createEvaluation((fuml.syntax.values.ValueSpecification)timeEvent.getWhen().getExpr());
 				if(evaluation != null) {
 					if(evaluation instanceof OpaqueExpressionEvaluation) {
 						((OpaqueExpressionEvaluation)evaluation).setContext(context);

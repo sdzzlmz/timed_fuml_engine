@@ -24,7 +24,7 @@ public abstract class EventOccurrence extends FumlObject {
 		_startObjectBehavior();
 	}
 	
-	protected void doSend() {
+	public void doSend() {
 		// Send this event occurrence to the target.
 		
 		this.target.send(this);

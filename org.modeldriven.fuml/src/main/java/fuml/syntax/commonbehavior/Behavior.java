@@ -12,6 +12,8 @@
 
 package fuml.syntax.commonbehavior;
 
+import fuml.syntax.classification.ParameterList;
+
 public abstract class Behavior extends fuml.syntax.structuredclassifiers.Class_ {
 
 	public boolean isReentrant = true;
@@ -43,5 +45,9 @@ public abstract class Behavior extends fuml.syntax.structuredclassifiers.Class_ 
 			fuml.syntax.classification.BehavioralFeature specification) {
 		this.specification = specification;
 	} // _setSpecification
+
+	public ParameterList getOwnedParameters() {
+		return this.ownedParameter;
+	}
 
 } // Behavior

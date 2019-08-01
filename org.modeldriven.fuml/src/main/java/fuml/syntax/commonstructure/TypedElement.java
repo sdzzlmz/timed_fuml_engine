@@ -19,5 +19,6 @@ public class TypedElement extends fuml.syntax.commonstructure.NamedElement {
 	public void setType(fuml.syntax.commonstructure.Type type) {
 		this.type = type;
 	} // setType
+	public Type getType() { return  this.type; }
 
 } // TypedElement

@@ -31,7 +31,9 @@ public abstract class NamedElement extends fuml.syntax.commonstructure.Element {
 		}
 
 	} // setName
-
+	public String getName() {
+		return  this.name;
+	}
 	public void setVisibility(
 			fuml.syntax.commonstructure.VisibilityKind visibility) {
 		this.visibility = visibility;

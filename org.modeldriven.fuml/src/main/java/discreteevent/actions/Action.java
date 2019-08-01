@@ -16,7 +16,7 @@
 package discreteevent.actions;
 
 import discreteevent.Event;
-import org.eclipse.papyrus.moka.discreteevent.Event;
+
 
 public abstract class Action {
 

@@ -20,5 +20,5 @@ public class LiteralReal extends
 	public void setValue(float value) {
 		this.value = value;
 	} // setValue
-
+	public float getValue() { return this.value; }
 } // LiteralReal

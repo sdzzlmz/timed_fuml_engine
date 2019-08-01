@@ -179,6 +179,7 @@ public class TestEnvironment {
 
 		return structuredValue;
 
+
 	} // makeStructuredValue
 
 	public Value makeValue(Classifier type) {

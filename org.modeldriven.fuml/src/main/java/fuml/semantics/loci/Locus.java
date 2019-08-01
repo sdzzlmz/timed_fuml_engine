@@ -145,4 +145,8 @@ public class Locus extends org.modeldriven.fuml.FumlObject {
 	public ExecutionFactory getFactory() {
 		return this.factory;
 	}
+	public Executor getExecutor() {
+		return this.executor;
+	}
+
 } // Locus

@@ -15,7 +15,8 @@
  *****************************************************************************/
 package discreteevent;
 
-import org.eclipse.papyrus.moka.discreteevent.actions.Action;
+
+import discreteevent.actions.Action;
 import timedfuml.actions._displayCurrentTimeAction;
 
 import java.util.ArrayList;

@@ -15,8 +15,9 @@
 
 package timedfuml.actions;
 
-import org.eclipse.papyrus.moka.discreteevent.actions.Action;
-import org.eclipse.papyrus.moka.timedfuml.semantics.Timed_OpaqueActionActivation;
+import discreteevent.actions.Action;
+
+import timedfuml.semantics.Timed_OpaqueActionActivation;
 
 /**
  * @author ac221913

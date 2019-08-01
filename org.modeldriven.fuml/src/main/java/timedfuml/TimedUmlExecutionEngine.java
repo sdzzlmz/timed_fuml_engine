@@ -13,30 +13,45 @@
  *****************************************************************************/
 package timedfuml;
 
+import UMLPrimitiveTypes.UMLPrimitiveTypesUtils;
 import discreteevent.DEScheduler;
 import fuml.semantics.commonbehavior.ParameterValue;
+import fuml.semantics.commonbehavior.ParameterValueList;
 import fuml.semantics.loci.Executor;
 import fuml.semantics.loci.Locus;
-import org.eclipse.core.runtime.IProgressMonitor;
-import org.eclipse.papyrus.moka.composites.Semantics.impl.Loci.LociL3.CS_Executor;
-import org.eclipse.papyrus.moka.discreteevent.DEScheduler;
-import org.eclipse.papyrus.moka.fuml.Semantics.Loci.LociL1.ILocus;
-import org.eclipse.papyrus.moka.fuml.control.execution.RootExecution;
-import org.eclipse.papyrus.moka.fuml.control.queue.ExecutionController;
-import org.eclipse.papyrus.moka.fuml.statemachines.StateMachineExecutionEngine;
-import org.eclipse.papyrus.moka.timedfuml.actions._displayCurrentTimeAction;
-import org.eclipse.papyrus.moka.timedfuml.control.queue.TimedExecutionLoop;
-import org.eclipse.papyrus.moka.timedfuml.semantics.Loci.TimedExecutionFactory;
-import org.eclipse.papyrus.moka.timedfuml.semantics.Loci.TimedLocus;
+
+import fuml.semantics.simpleclassifiers.BooleanValue;
+import fuml.semantics.simpleclassifiers.IntegerValue;
+import fuml.semantics.simpleclassifiers.StringValue;
+import fuml.semantics.simpleclassifiers.UnlimitedNaturalValue;
+import fuml.semantics.values.Value;
+import fuml.semantics.values.ValueList;
+import fuml.syntax.classification.Parameter;
+import fuml.syntax.classification.ParameterList;
+import fuml.syntax.commonbehavior.Behavior;
+import fuml.syntax.commonstructure.Type;
+import fuml.syntax.simpleclassifiers.PrimitiveType;
+import org.eclipse.emf.ecore.EObject;
+
+import fuml.syntax.classification.ParameterDirectionKind;
+import org.modeldriven.fuml.control.execution.RootExecution;
+import org.modeldriven.fuml.control.queue.ExecutionController;
 import timedfuml.actions._displayCurrentTimeAction;
+import timedfuml.control.queue.TimedExecutionLoop;
 import timedfuml.semantics.Loci.TimedExecutionFactory;
 import timedfuml.semantics.Loci.TimedLocus;
+import org.eclipse.uml2.uml.Class;
 
+import javax.swing.*;
+import java.util.ArrayList;
 import java.util.List;
 
+
 public class TimedUmlExecutionEngine {
+	protected EObject  executionEntryPoint;
 	protected  Locus locus;
-	protected List<ParameterValue> executionArguments;
+	protected ParameterValueList executionArguments;
+	protected String[] executionArgs;
 	protected double getStopTime() {
 		// Scheduler stop time
 		return -1.0;
@@ -76,13 +91,106 @@ public class TimedUmlExecutionEngine {
 	}
 	
 
-	public void start(ProgressMonitor monitor) {
+//	public void start(ProgressMonitor monitor) {
+	public void start() {
 		// we start the default fUML* execution but we know it should finish quick,
 		// once all the Externally controlled visitors are suspended.
 		this.initDEScheduler();
 		this.doPreRunActions();
-		super.start(monitor);
+//		super.start(monitor);
+		this.locus = this.initializeLocus();
+		if (this.executionEntryPoint != null) {
+			// initializes built-in primitive types
+			this.initializeBuiltInPrimitiveTypes(locus);
+			// Initializes opaque behavior executions
+//			this.registerOpaqueBehaviorExecutions(locus);
+			// Initializes system services
+//			this.registerSystemServices(locus);
+			// Initializes semantic strategies
+//			this.registerSemanticStrategies(locus);
+			// Initializes arguments
+			this.initializeArguments(this.executionArgs);
+			// Start execution
+			this.run_();
+		}
 		this.doPostRunActions();
 	}
+	protected void initializeBuiltInPrimitiveTypes(Locus locus) {
+		locus.getFactory().addBuiltInType(UMLPrimitiveTypesUtils.getReal(this.executionEntryPoint));
+		locus.getFactory().addBuiltInType(UMLPrimitiveTypesUtils.getInteger(this.executionEntryPoint));
+		locus.getFactory().addBuiltInType(UMLPrimitiveTypesUtils.getBoolean(this.executionEntryPoint));
+		locus.getFactory().addBuiltInType(UMLPrimitiveTypesUtils.getString(this.executionEntryPoint));
+	}
+	public void initializeArguments(String[] args) {
+		if (this.locus == null) {
+			return;
+		}
+		this.executionArguments = new ParameterValueList();
+		if (args == null) {
+			return;
+		}
+		ValueList tmpArgs = new ValueList();
+		if (! (this.executionEntryPoint instanceof Behavior)) {
+			return ;
+		}
+		// analyzes arguments versus parameters of the main behavior
+		ParameterList parameters = ((Behavior) this.executionEntryPoint).getOwnedParameters();
+		if (parameters == null) {
+			return;
+		}
+		ParameterList parametersWhichNeedArguments = new ParameterList();
+		// There must be the same number of parameters (except the return parameter)
+		for (Parameter p : parameters) {
+			if (p.getDirection() != ParameterDirectionKind.return_) {
+				parametersWhichNeedArguments.add(p);
+			}
+		}
+		if (parametersWhichNeedArguments.size() != args.length) {
+			return;
+		}
 
+		// iterates on parameters, and tries to create tokens corresponding to arguments
+		int i = 0;
+		for (Parameter p : parametersWhichNeedArguments) {
+			Type t = p.getType();
+			if (t != null) {
+				// FIXME
+				PrimitiveType pt = (PrimitiveType) this.locus.getFactory().getBuiltInType(t.getName());
+				if (pt == null) {
+					return;
+				}
+				if (pt.getName().equals("Integer")) {
+					IntegerValue value = new IntegerValue();
+					value.value = new Integer(args[i]);
+					tmpArgs.add(value);
+				} else if (pt.getName().equals("String")) {
+					StringValue value = new StringValue();
+					value.value = args[i];
+					tmpArgs.add(value);
+				} else if (pt.getName().equals("Boolean")) {
+					BooleanValue value = new BooleanValue();
+					value.value = new Boolean(args[i]);
+					tmpArgs.add(value);
+				} else if (pt.getName().equals("UnlimitedNatural")) {
+					UnlimitedNaturalValue value = new UnlimitedNaturalValue();
+					value.value = new UMLPrimitiveTypes.UnlimitedNatural(Integer.parseInt(args[i]));
+					tmpArgs.add(value);
+				} else {
+					return; // Unsupported type. TODO Consider Real
+				}
+			}
+			i++;
+		}
+
+		i = 0;
+		// creates actual arguments
+		for (Value v : tmpArgs) {
+			ParameterValue arg = new ParameterValue();
+			arg.setParameter(parameters.get(i));
+			arg.setValues(new ValueList());
+			arg.getValues().add(v);
+			this.executionArguments.add(arg);
+			i++;
+		}
+	}
 }
